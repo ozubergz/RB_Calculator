@@ -18,10 +18,35 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <!--Custom Components-->
-    <style name="HighLightedBtn">
+
+    <style name="Row_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:weightSum">4</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="Base_btn">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginStart">4dp</item>
+        <item name="android:layout_marginEnd">4dp</item>
+    </style>
+
+    <style name="Base_btn.left">
+        <item name="android:layout_marginStart">9dp</item>
+        <item name="android:layout_marginEnd">4dp</item>
+    </style>
+
+    <style name="Base_btn.highlight">
+        <item name="android:layout_marginStart">4dp</item>
+        <item name="android:layout_marginEnd">9dp</item>
         <item name="android:backgroundTint">@color/lighter_green</item>
         <item name="android:textStyle">bold</item>
     </style>
+
 
     <!--Bottom Sheets-->
     <style name="ThemeOverlay.MyTheme.BottomSheetDialog" parent="ThemeOverlay.MaterialComponents.Dialog">

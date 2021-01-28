@@ -19,187 +19,108 @@
 
     <LinearLayout
         android:id="@+id/row_four"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="4"
-        android:layout_weight="1"
-        >
+        style="@style/Row_layout" >
 
         <Button
             android:id="@+id/btn_seven"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginStart="9dp"
-            android:layout_marginEnd="4dp"
-            android:text="7" />
+            android:text="@string/seven"
+            style="@style/Base_btn.left"/>
 
         <Button
             android:id="@+id/btn_eight"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginHorizontal="4dp"
-            android:text="8" />
+            android:text="@string/eight"
+            style="@style/Base_btn"/>
 
         <Button
             android:id="@+id/btn_nine"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginHorizontal="4dp"
-            android:text="9" />
+            android:text="@string/nine"
+            style="@style/Base_btn" />
 
         <Button
             android:id="@+id/btn_divide"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="9dp"
-            style="@style/HighLightedBtn"
-            android:text="/"
+            style="@style/Base_btn.highlight"
+            android:text="@string/divide_op"
             />
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/row_3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="4"
-        android:layout_weight="1"
-        >
+        style="@style/Row_layout" >
 
         <Button
             android:id="@+id/btn_four"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginStart="9dp"
-            android:layout_marginEnd="4dp"
-            android:text="4" />
+            android:text="@string/four"
+            style="@style/Base_btn.left"/>
 
         <Button
             android:id="@+id/btn_five"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginHorizontal="4dp"
-            android:text="5" />
+            android:text="@string/five"
+            style="@style/Base_btn"/>
 
         <Button
             android:id="@+id/btn_six"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginHorizontal="4dp"
-            android:text="6" />
+            android:text="@string/six"
+            style="@style/Base_btn"/>
 
         <Button
             android:id="@+id/btn_multiply"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="9dp"
-            style="@style/HighLightedBtn"
-            android:text="*"
+            style="@style/Base_btn.highlight"
+            android:text="@string/add_op"
             />
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/row_2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="4"
-        android:layout_weight="1"
-        >
+        style="@style/Row_layout" >
 
         <Button
             android:id="@+id/btn_one"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginStart="9dp"
-            android:layout_marginEnd="4dp"
-            android:layout_weight="1"
-            android:text="1" />
+            android:text="@string/one"
+            style="@style/Base_btn.left" />
 
         <Button
             android:id="@+id/btn_two"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginHorizontal="4dp"
-            android:layout_weight="1"
-            android:text="2" />
+            android:text="@string/two"
+            style="@style/Base_btn" />
 
         <Button
             android:id="@+id/btn_three"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginHorizontal="4dp"
-            android:layout_weight="1"
-            android:text="3" />
+            android:text="@string/three"
+            style="@style/Base_btn" />
 
         <Button
             android:id="@+id/btn_subtract"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="9dp"
-            android:layout_weight="1"
-            style="@style/HighLightedBtn"
-            android:text="-"
+            style="@style/Base_btn.highlight"
+            android:text="@string/minus_op"
             />
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/row_1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="4dp"
-        android:orientation="horizontal"
-        android:weightSum="4"
-        android:layout_weight="1"
-        >
+        style="@style/Row_layout" >
 
         <Button
             android:id="@+id/btn_decimal"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginHorizontal="4dp"
-            android:layout_weight="1"
-            android:text="." />
+            android:text="@string/decimal"
+            style="@style/Base_btn.left"/>
 
         <Button
             android:id="@+id/btn_zero"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginHorizontal="4dp"
-            android:layout_weight="1"
-            android:text="0" />
+            android:text="@string/zero"
+            style="@style/Base_btn" />
 
         <Button
             android:id="@+id/btn_clear"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginHorizontal="4dp"
-            android:layout_weight="1"
-            android:text="CLR" />
+            android:text="@string/clear"
+            style="@style/Base_btn" />
 
         <Button
             android:id="@+id/btn_add"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginHorizontal="4dp"
-            android:layout_weight="1"
-            android:text="+"
-            style="@style/HighLightedBtn"
+            style="@style/Base_btn.highlight"
+            android:text="@string/add_op"
             />
 
     </LinearLayout>
@@ -208,15 +129,15 @@
         android:id="@+id/row_0"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        >
+        android:layout_weight="1" >
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginHorizontal="8dp"
             android:backgroundTint="?colorOnPrimary"
             android:textColor="@color/white_50"
-            android:text="="/>
+            android:text="@string/equal_op"/>
 
     </LinearLayout>
 
