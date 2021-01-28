@@ -19,7 +19,7 @@
 
     <!--Custom Components-->
     <style name="HighLightedBtn">
-        <item name="android:backgroundTint">#a6f0c6</item>
+        <item name="android:backgroundTint">@color/lighter_green</item>
         <item name="android:textStyle">bold</item>
     </style>
 

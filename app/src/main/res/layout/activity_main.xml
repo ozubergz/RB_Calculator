@@ -11,7 +11,11 @@
         android:id="@+id/tv_display"
         android:layout_width="match_parent"
         android:layout_height="320dp"
-        android:background="#f6f5f5"/>
+        tools:text="0"
+        android:gravity="bottom|end"
+        android:textSize="80sp"
+        android:padding="10dp"
+        android:background="@color/lighter_grey"/>
 
     <LinearLayout
         android:id="@+id/row_four"
@@ -210,7 +214,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginHorizontal="8dp"
-            android:backgroundTint="#75cfb8"
+            android:backgroundTint="?colorOnPrimary"
             android:textColor="@color/white_50"
             android:text="="/>
 

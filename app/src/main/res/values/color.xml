@@ -66,5 +66,8 @@
     <!-- Custom Colors -->
     <color name="grey">#d3e0ea</color>
     <color name="blue_green">#75cfb8</color>
+    <color name="lighter_green">#a6f0c6</color>
+    <color name="lighter_grey">#f6f5f5</color>
+
 
 </resources>
