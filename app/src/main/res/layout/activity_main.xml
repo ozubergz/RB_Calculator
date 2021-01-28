@@ -11,7 +11,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="320dp"
-        android:background="@color/red_600"/>
+        android:background="#f6f5f5"/>
 
     <LinearLayout
         android:id="@+id/row_four"
@@ -27,6 +27,9 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="4dp"
+            style="@style/GreyBtn"
             android:text="7" />
 
         <Button
@@ -34,6 +37,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:layout_marginHorizontal="4dp"
+            style="@style/GreyBtn"
             android:text="8" />
 
         <Button
@@ -41,6 +46,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:layout_marginHorizontal="4dp"
+            style="@style/GreyBtn"
             android:text="9" />
 
         <Button
@@ -48,6 +55,9 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="9dp"
+            style="@style/HighLightedBtn"
             android:text="/"
             />
 
@@ -67,6 +77,9 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="4dp"
+            style="@style/GreyBtn"
             android:text="4" />
 
         <Button
@@ -74,6 +87,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:layout_marginHorizontal="4dp"
+            style="@style/GreyBtn"
             android:text="5" />
 
         <Button
@@ -81,6 +96,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:layout_marginHorizontal="4dp"
+            style="@style/GreyBtn"
             android:text="6" />
 
         <Button
@@ -88,6 +105,9 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="9dp"
+            style="@style/HighLightedBtn"
             android:text="*"
             />
 
@@ -106,28 +126,38 @@
             android:id="@+id/btn_one"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="4dp"
             android:layout_weight="1"
+            style="@style/GreyBtn"
             android:text="1" />
 
         <Button
             android:id="@+id/btn_two"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_marginHorizontal="4dp"
             android:layout_weight="1"
+            style="@style/GreyBtn"
             android:text="2" />
 
         <Button
             android:id="@+id/btn_three"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_marginHorizontal="4dp"
             android:layout_weight="1"
+            style="@style/GreyBtn"
             android:text="3" />
 
         <Button
             android:id="@+id/btn_subtract"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="9dp"
             android:layout_weight="1"
+            style="@style/HighLightedBtn"
             android:text="-"
             />
 
@@ -137,6 +167,7 @@
         android:id="@+id/row_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="4dp"
         android:orientation="horizontal"
         android:weightSum="4"
         android:layout_weight="1"
@@ -146,29 +177,37 @@
             android:id="@+id/btn_decimal"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_marginHorizontal="4dp"
             android:layout_weight="1"
+            style="@style/GreyBtn"
             android:text="." />
 
         <Button
             android:id="@+id/btn_zero"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_marginHorizontal="4dp"
             android:layout_weight="1"
+            style="@style/GreyBtn"
             android:text="0" />
 
         <Button
             android:id="@+id/btn_clear"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_marginHorizontal="4dp"
             android:layout_weight="1"
+            style="@style/GreyBtn"
             android:text="CLR" />
 
         <Button
             android:id="@+id/btn_add"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_marginHorizontal="4dp"
             android:layout_weight="1"
             android:text="+"
+            style="@style/HighLightedBtn"
             />
 
     </LinearLayout>
@@ -182,6 +221,8 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginHorizontal="8dp"
+            android:backgroundTint="#75cfb8"
             android:text="="/>
 
     </LinearLayout>
