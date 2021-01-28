@@ -50,6 +50,7 @@
     <color name="green_200">#03dac6</color> <!--Color secondary-->
     <color name="green_500">#018786</color> <!--Color secondary variant-->
 
+
     <color name="red_200">#cf6679</color> <!--Color error (dark)-->
     <color name="red_600">#b00020</color> <!--Color error (light)-->
 
@@ -61,5 +62,9 @@
     <!--Color on secondary (light), color on background (light),-->
     <!--color on surface (light)-->
     <color name="black_900">#000000</color>
+
+    <!-- Custom Colors -->
+    <color name="grey">#d3e0ea</color>
+    <color name="blue_green">#75cfb8</color>
 
 </resources>
