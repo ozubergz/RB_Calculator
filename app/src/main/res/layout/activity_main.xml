@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_display"
         android:layout_width="match_parent"
-        android:layout_height="320dp"
+        android:layout_height="0dp"
+        android:layout_weight="7"
         tools:text="0"
         android:gravity="bottom|end"
-        android:textSize="80sp"
+        android:textSize="50sp"
         android:padding="10dp"
         android:background="@color/lighter_grey"/>
 
@@ -21,23 +21,27 @@
         android:id="@+id/row_four"
         style="@style/Row_layout" >
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_seven"
+            android:onClick="btnNumber"
             android:text="@string/seven"
             style="@style/Base_btn.left"/>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_eight"
+            android:onClick="btnNumber"
             android:text="@string/eight"
             style="@style/Base_btn"/>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_nine"
+            android:onClick="btnNumber"
             android:text="@string/nine"
             style="@style/Base_btn" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_divide"
+            android:onClick="btnOperator"
             style="@style/Base_btn.highlight"
             android:text="@string/divide_op"
             />
@@ -48,25 +52,29 @@
         android:id="@+id/row_3"
         style="@style/Row_layout" >
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_four"
+            android:onClick="btnNumber"
             android:text="@string/four"
             style="@style/Base_btn.left"/>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_five"
+            android:onClick="btnNumber"
             android:text="@string/five"
             style="@style/Base_btn"/>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_six"
+            android:onClick="btnNumber"
             android:text="@string/six"
             style="@style/Base_btn"/>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_multiply"
+            android:onClick="btnOperator"
             style="@style/Base_btn.highlight"
-            android:text="@string/add_op"
+            android:text="@string/multiply_op"
             />
 
     </LinearLayout>
@@ -75,23 +83,27 @@
         android:id="@+id/row_2"
         style="@style/Row_layout" >
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_one"
+            android:onClick="btnNumber"
             android:text="@string/one"
             style="@style/Base_btn.left" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_two"
+            android:onClick="btnNumber"
             android:text="@string/two"
             style="@style/Base_btn" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_three"
+            android:onClick="btnNumber"
             android:text="@string/three"
             style="@style/Base_btn" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_subtract"
+            android:onClick="btnOperator"
             style="@style/Base_btn.highlight"
             android:text="@string/minus_op"
             />
@@ -102,23 +114,27 @@
         android:id="@+id/row_1"
         style="@style/Row_layout" >
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_decimal"
+            android:onClick="btnDecimal"
             android:text="@string/decimal"
             style="@style/Base_btn.left"/>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_zero"
+            android:onClick="btnNumber"
             android:text="@string/zero"
             style="@style/Base_btn" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_clear"
+            android:onClick="btnClear"
             android:text="@string/clear"
             style="@style/Base_btn" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_add"
+            android:onClick="btnOperator"
             style="@style/Base_btn.highlight"
             android:text="@string/add_op"
             />
@@ -131,12 +147,13 @@
         android:layout_height="wrap_content"
         android:layout_weight="1" >
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginHorizontal="8dp"
             android:backgroundTint="?colorOnPrimary"
             android:textColor="@color/white_50"
+            android:onClick="btnEqual"
             android:text="@string/equal_op"/>
 
     </LinearLayout>
