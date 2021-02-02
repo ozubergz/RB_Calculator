@@ -1,17 +1,42 @@
 package viewmodel;
 
+import android.app.Application;
+import android.content.Context;
+import android.content.SharedPreferences;
+
+import androidx.annotation.NonNull;
+import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class MainViewModel extends ViewModel {
+import com.example.rbcalculator.R;
 
+public class MainViewModel extends AndroidViewModel {
+
+    private static final String STRING_DATA_KEY = "SAVED_DATA_KEY";
     private String characters = "";
 
     // Mutable is a subclass of LiveData.
     // It can be change hence the name Mutable; READ & WRITE
     private MutableLiveData<String> result = new MutableLiveData<>();
     private MutableLiveData<String> stringOfValues = new MutableLiveData<>();
+
+    // Shared Preferences
+    private SharedPreferences sharedPref = getApplication().getSharedPreferences(
+            getApplication().getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+
+    public MainViewModel(@NonNull Application application) {
+        super(application);
+    }
+
+    public void saveStringData(String data) {
+        sharedPref.edit().putString(STRING_DATA_KEY, data).apply();
+    }
+
+    public String getStringData() {
+        return sharedPref.getString(STRING_DATA_KEY, "");
+    }
 
     // LiveData cannot be change; Immutable
     // READ ONLY
@@ -25,11 +50,13 @@ public class MainViewModel extends ViewModel {
 
     public void setEmptyString() {
         characters = "";
+        saveStringData("");
         stringOfValues.setValue(characters);
     }
 
     public void setStringOfValues(String v) {
         characters += v;
+        saveStringData(characters);
         stringOfValues.setValue(characters);
     }
 

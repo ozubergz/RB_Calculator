@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
 
     private MaterialTextView tvDisplay;
     private MainViewModel viewModel;
-    private AndroidViewModel androidViewModel;
     private MaterialButton myBtn;
 
     private boolean lastNumber;
@@ -31,9 +30,10 @@ public class MainActivity extends AppCompatActivity {
 
         tvDisplay = findViewById(R.id.tv_display);
 
-        ///////// View Model ////////
+        viewModel = new ViewModelProvider.AndroidViewModelFactory(
+                getApplication()).create(MainViewModel.class);
 
-        viewModel = new ViewModelProvider(this).get(MainViewModel.class);
+        tvDisplay.setText(viewModel.getStringData());
 
         viewModel.getStringOfValues().observe(this, new Observer<String>() {
             @Override
