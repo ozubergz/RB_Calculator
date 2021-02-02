@@ -6,10 +6,12 @@ import androidx.lifecycle.ViewModel;
 
 public class MainViewModel extends ViewModel {
 
+    private String characters = "";
+
     // Mutable is a subclass of LiveData.
     // It can be change hence the name Mutable; READ & WRITE
     private MutableLiveData<String> result = new MutableLiveData<>();
-//    private MutableLiveData<String> stringOfNumbers = new MutableLiveData<>();
+    private MutableLiveData<String> stringOfValues = new MutableLiveData<>();
 
     // LiveData cannot be change; Immutable
     // READ ONLY
@@ -17,13 +19,19 @@ public class MainViewModel extends ViewModel {
         return result;
     }
 
-//    public LiveData<String> getStringOfNumbers() {
-//        return stringOfNumbers;
-//    }
+    public LiveData<String> getStringOfValues() {
+        return stringOfValues;
+    }
 
-//    public void setStringOfNumbers(String number) {
-//        stringOfNumbers.setValue(number);
-//    }
+    public void setEmptyString() {
+        characters = "";
+        stringOfValues.setValue(characters);
+    }
+
+    public void setStringOfValues(String v) {
+        characters += v;
+        stringOfValues.setValue(characters);
+    }
 
     public void calculate(String tvValue) {
         if(tvValue.contains("+")) {

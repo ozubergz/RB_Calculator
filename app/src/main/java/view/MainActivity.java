@@ -1,6 +1,7 @@
 package view;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -17,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
 
     private MaterialTextView tvDisplay;
     private MainViewModel viewModel;
+    private AndroidViewModel androidViewModel;
+    private MaterialButton myBtn;
 
     private boolean lastNumber;
     private boolean lastDecimal;
@@ -26,14 +29,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        tvDisplay = findViewById(R.id.tv_display);
+
+        ///////// View Model ////////
+
         viewModel = new ViewModelProvider(this).get(MainViewModel.class);
 
-//        viewModel.getStringOfNumbers().observe(this, new Observer<String>() {
-//            @Override
-//            public void onChanged(String s) {
-//                tvDisplay.setText(s);
-//            }
-//        });
+        viewModel.getStringOfValues().observe(this, new Observer<String>() {
+            @Override
+            public void onChanged(String s) {
+                tvDisplay.setText(s);
+            }
+        });
 
         viewModel.getResult().observe(this, new Observer<String>() {
             @Override
@@ -41,35 +48,31 @@ public class MainActivity extends AppCompatActivity {
                 tvDisplay.setText(s);
             }
         });
-
-        tvDisplay = findViewById(R.id.tv_display);
     }
 
     public void btnNumber(View v) {
-        MaterialButton myBtn = (MaterialButton) v;
-//        String number = myBtn.getText().toString();
-//        viewModel.setStringOfNumbers(number);
-        tvDisplay.append(myBtn.getText());
+        myBtn = (MaterialButton) v;
+        viewModel.setStringOfValues(myBtn.getText().toString());
         lastNumber = true;
     }
 
     public void btnClear(View v) {
-        tvDisplay.setText("");
+        viewModel.setEmptyString();
         lastNumber = false;
         lastDecimal = false;
     }
 
     public void btnDecimal(View v) {
         if(lastNumber && !lastDecimal) {
-            tvDisplay.append(".");
+            viewModel.setStringOfValues(".");
             lastDecimal = true;
         }
     }
 
     public void btnOperator(View v) {
-        MaterialButton operator = (MaterialButton) v;
+        myBtn = (MaterialButton) v;
         if(lastNumber && !isOperatorAdded(tvDisplay.getText().toString())) {
-            tvDisplay.append(operator.getText());
+            viewModel.setStringOfValues(myBtn.getText().toString());
             lastNumber = false;
             lastDecimal = false;
         }

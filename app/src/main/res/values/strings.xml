@@ -17,4 +17,5 @@
     <string name="clear">CLR</string>
     <string name="add_op">+</string>
     <string name="equal_op">=</string>
+    <string name="preference_file_key" translatable="false">MY_PRE_KEY</string>
 </resources>
